@@ -25,7 +25,7 @@ Para que una función sea un constructor, debe cumplir lo siguiente:
 
 -->La palabra clave new: Esta es la más importante. Al ejecutar la función, 
   debemos poner new delante. Esto le dice a JavaScript:
-"Crea un objeto vacío, asígnale este molde y devuélvelo".
+  "Crea un objeto vacío, asígnale este molde y devuélvelo".
 
 2. ¿Qué ocurre internamente cuando usas new?
 Cuando haces let persona = new Persona(), JavaScript hace tres cosas automáticas:
