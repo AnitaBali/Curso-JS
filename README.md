@@ -14,29 +14,36 @@ El proyecto está organizado por secciones temáticas para facilitar la consulta
 * **Sección 2-6:** Introducción, Variables, Operadores y Estructuras de Control (Bucles y Decisiones).
 * **Sección 7-8:** Manejo de Arrays y Matrices.
 * **Sección 9-10:** Funciones y Objetos.
-* **Sección 11 (Actual):** Clases y Programación Orientada a Objetos.
+* **Sección 11:** Programación Orientada a Objetos (Clases).
+* **Sección 12 - 13:** Robustez y Sintaxis Moderna (Manejo de Errores y Arrow Functions).
+* **Sección 14 - 15 (Últimas):** Lógica Asíncrona (Callbacks y Promesas).
 
-## 🧠 Conceptos Dominados en POO (Sección 11)
+## 🧠 Nuevos Conceptos Dominados (Asincronía)
 
-* **Clases y Constructores:** Creación de moldes para generar objetos dinámicos.
-* **Encapsulamiento:** Protección de datos mediante guiones bajos (`_`) y validación con **Setters** y **Getters**.
-* **Herencia:** Extensión de clases con `extends` y uso de `super()` para jerarquías eficientes.
-* **Polimorfismo:** Sobrescritura de métodos para adaptar comportamientos en subclases.
-* **Métodos Estáticos (`static`):** Creación de utilidades globales de clase y contadores de instancias.
+### 📞 Callbacks (Sección 14)
+* **Funciones de orden superior:** Capacidad de pasar funciones como argumentos.
+* **Callbacks Anónimos:** Implementación de lógica "al vuelo" para un código más eficiente.
+* **Control de flujo:** Delegación de tareas para procesos dinámicos.
 
-## 🛠️ Ejercicios Destacados
-* **Comparador de Productos:** Lógica estática para determinar el producto más caro/barato.
-* **Contador de Vehículos:** Seguimiento global de objetos creados mediante propiedades estáticas.
-* **Conversor de Unidades:** Métodos de utilidad para cálculos matemáticos rápidos.
-* **Sistema de Cine:** Gestión de herencia entre películas y series con filtros lógicos.
+### 💍 Promesas (Sección 15)
+* **Gestión de Estados:** Comprensión de estados `Pending`, `Fulfilled` y `Rejected`.
+* **Consumo de datos:** Manejo profesional con `.then()`, `.catch()` y `.finally()`.
+* **Simulación de latencia:** Uso de `setTimeout` dentro de promesas para simular tiempos de respuesta de servidores reales.
 
-## 📈 Ruta de Aprendizaje
-- [x] Variables y Operadores
-- [x] Estructuras de Decisión y Bucles
-- [x] Funciones y Objetos
-- [x] Programación Orientada a Objetos (Básico)
-- [x] Métodos Estáticos y Lógica Avanzada
-- [ ] Clases Abstractas y Patrones (Siguiente paso...)
+## 🛠️ Ejercicios Destacados de Asincronía
+* **Simulador de Cajero:** Promesa con verificación de saldo y tiempo de espera de 2 segundos.
+* **Verificador de Email:** Lógica asíncrona para validar usuarios contra una "base de datos" simulada.
+* **El Transformador:** Uso intensivo de callbacks anónimos para manipulación de strings.
+
+## 📈 Ruta de Aprendizaje Actualizada
+- [x] Variables, Operadores y Bucles
+- [x] Manejo de Arrays y Matrices
+- [x] Programación Orientada a Objetos (Clases)
+- [x] Control de Errores (Try/Catch)
+- [x] Arrow Functions (Sintaxis moderna)
+- [x] Callbacks y Lógica de Retorno
+- [x] Promesas y Flujos Asíncronos
+- [ ] Async / Await (Próximo objetivo 🎯)
 
 ---
-*Aprendiendo paso a paso con retos reales.*
+*Documentando el camino hacia el desarrollo Full Stack.*
