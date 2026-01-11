@@ -16,9 +16,11 @@ El proyecto está organizado por secciones temáticas para facilitar la consulta
 * **Sección 9-10:** Funciones y Objetos.
 * **Sección 11:** Programación Orientada a Objetos (Clases).
 * **Sección 12 - 13:** Robustez y Sintaxis Moderna (Manejo de Errores y Arrow Functions).
-* **Sección 14 - 15 (Últimas):** Lógica Asíncrona (Callbacks y Promesas).
+* **Sección 14-15:** Lógica Asíncrona (Callbacks y Promesas).
+* **Sección 16:** Interacción con el Usuario (Prompt & Input Validation).
+* **Sección 17:** Asincronía Moderna (Async / Await).
 
-## 🧠 Nuevos Conceptos Dominados (Asincronía)
+## 🧠 Nuevos Conceptos Dominados Asincronía Moderna (Async / Await).
 
 ### 📞 Callbacks (Sección 14)
 * **Funciones de orden superior:** Capacidad de pasar funciones como argumentos.
@@ -30,10 +32,21 @@ El proyecto está organizado por secciones temáticas para facilitar la consulta
 * **Consumo de datos:** Manejo profesional con `.then()`, `.catch()` y `.finally()`.
 * **Simulación de latencia:** Uso de `setTimeout` dentro de promesas para simular tiempos de respuesta de servidores reales.
 
-## 🛠️ Ejercicios Destacados de Asincronía
-* **Simulador de Cajero:** Promesa con verificación de saldo y tiempo de espera de 2 segundos.
-* **Verificador de Email:** Lógica asíncrona para validar usuarios contra una "base de datos" simulada.
-* **El Transformador:** Uso intensivo de callbacks anónimos para manipulación de strings.
+### ⌨️ Interacción y Validación (Sección 16)
+* **Captura de Inputs:** Uso de `prompt()` para recolectar datos del usuario.
+* **Validación de Datos:** Control de valores nulos (`null`), vacíos (`""`) y conversión de tipos con `Number()` y `isNaN()`.
+
+### ⚡ Async / Await (Sección 17)
+* **Sintaxis Moderna:** Escritura de código asíncrono con apariencia secuencial y legible.
+* **Await:** Pausa controlada de la ejecución hasta que la promesa se resuelve, permitiendo asignar el resultado a variables.
+* **Manejo de Errores:** Integración de bloques `try / catch / finally` para un flujo de errores más robusto.
+
+## 🛠️ Ejercicios Destacados
+* **Simulador de Cajero:** Promesa con verificación de saldo y tiempo de espera.
+* **Lanzador de Dados:** Uso de `Math.random()` dentro de promesas para lógica de azar.
+* **Gestión de Reparto (Async/Await):** Sistema de logística que valida distancias y procesa envíos de forma secuencial.
+* **Sistema de Cupones:** Validación de strings y códigos promocionales mediante interacción directa.
+* **Verificador de Edad:** Lógica compleja de validación (NaN, vacíos y rangos numéricos).
 
 ## 📈 Ruta de Aprendizaje Actualizada
 - [x] Variables, Operadores y Bucles
@@ -41,9 +54,9 @@ El proyecto está organizado por secciones temáticas para facilitar la consulta
 - [x] Programación Orientada a Objetos (Clases)
 - [x] Control de Errores (Try/Catch)
 - [x] Arrow Functions (Sintaxis moderna)
-- [x] Callbacks y Lógica de Retorno
-- [x] Promesas y Flujos Asíncronos
-- [ ] Async / Await (Próximo objetivo 🎯)
+- [x] Callbacks y Promesas
+- [x] Interacción con Usuario (Prompt)
+- [x] Async / Await (Dominado ⚡)
 
 ---
 *Documentando el camino hacia el desarrollo Full Stack.*
