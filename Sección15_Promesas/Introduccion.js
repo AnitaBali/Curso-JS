@@ -100,3 +100,6 @@ const comprobarNota = (nota)=>{
 comprobarNota(4)
     .then(mensaje => console.log(mensaje))
     .catch(error => console.log(error))
+
+
+
