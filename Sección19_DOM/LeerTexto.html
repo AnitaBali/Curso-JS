@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="titulo-principal">Escribe algo abajo...</h1>
+    <input type="text" id="campo-texto" placeholder="Nuevo título">
+    <button id="btn-actualizar">Actualizar</button>
+
+    <script>
+        const titulo=document.querySelector("#titulo-principal");
+        const texto=document.querySelector("#campo-texto");
+        const boton=document.querySelector("#btn-actualizar");
+
+        boton.addEventListener("click", () =>{
+            titulo.textContent=texto.value;
+        });
+
+
+    </script>
+    
+</body>
+</html>

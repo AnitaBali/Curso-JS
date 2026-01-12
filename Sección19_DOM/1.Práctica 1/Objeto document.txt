@@ -1,0 +1,50 @@
+En JavaScript, el objeto document es como el centro de mando de toda tu página web. 
+Tienes diferentes formas de seleccionar elementos, algunas son antiguas y otras modernas.
+
+Aquí tienes las opciones principales explicadas de forma sencilla:
+
+1. Las opciones Modernas (Recomendadas)
+Estas son las más potentes porque funcionan igual que los selectores de CSS.
+
+      - document.querySelector('selector'):
+          > Qué hace: Devuelve el primer elemento que coincida.
+          > Uso: document.querySelector("#id"), document.querySelector(".clase") o 
+            document.querySelector("h1").
+
+      - document.querySelectorAll('selector'):
+          > Qué hace: Devuelve todos los elementos que coincidan en una lista (parecido a un Array).
+          > Uso: Útil si quieres cambiar todos los botones de la página a la vez.
+
+2. Las opciones Tradicionales (Específicas)
+Antes de que existiera querySelector, usábamos estos métodos. 
+Todavía se ven mucho en códigos antiguos y son un poco más rápidos en rendimiento 
+(aunque hoy en día apenas se nota).
+
+       - document.getElementById('nombre_id'):
+          > Busca solo por ID. Ojo: Aquí NO se pone el #.
+
+       - document.getElementsByClassName('nombre_clase'):
+          > Busca todos los elementos con esa clase. Devuelve una lista.
+
+       - document.getElementsByTagName('nombre_etiqueta'):
+          > Busca todos los div, p, li, etc.
+
+
+3. Tabla Comparativa: ¿Cuál usar?
+
+Método                  Selector           Devuelve            ¿Se usa hoy?
+querySelector           #id / .clase       El primero          ¡Sí! Es el estándar.
+getElementById          id                 El elemento         Sí, es muy específico.
+querySelectorAll        .clase             Una lista           Sí, para grupos.
+
+
+4. Propiedades útiles después de seleccionar
+Una vez que has hecho const elemento = document.querySelector(...), estas son tus herramientas 
+para manipularlo:
+
+Propiedad                       Qué cambia               Ejemplo
+.textContent                    El texto plano           el.textContent = "Hola"
+.innerHTML                      El HTML interno          el.innerHTML = "<b>Negrita</b>"
+.style                          El diseño (CSS)          el.style.display = "none"
+.value                          Contenido de inputs      el.value = "Texto escrito" 
+.classList                      Añadir/quitar clases     el.classList.add("activo")

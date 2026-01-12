@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    
+    <h1 id="numero-contador">0</h1>
+    <button id="btn-sumar" style="background-color: greenyellow;">Sumar</button>
+    <button id="btn-resetear" style="background-color: red;">Resetear</button>
+
+    <script>
+        const numero=document.querySelector("#numero-contador");
+        const btn1=document.querySelector("#btn-sumar");
+        const btn2=document.querySelector("#btn-resetear");
+        let contador=0;
+
+        btn1.addEventListener("click",() =>{
+            contador++;
+            numero.textContent=contador;
+        });
+
+        btn2.addEventListener("click",() => {
+            contador=0;
+            numero.textContent=contador;
+        });
+    </script>
+
+</body>
+</html>

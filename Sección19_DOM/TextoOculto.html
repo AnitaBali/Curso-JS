@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p class="secreto" style="display: none;"> Me has encontrado!</p>
+    <button id="btn-revelar">Revelar Secreto</button>
+
+    <script>
+        const textoSecreto=document.querySelector(".secreto");
+        const boton=document.querySelector("#btn-revelar");
+
+        boton.addEventListener("click",() =>{
+            textoSecreto.style.display="block";
+            textoSecreto.style.color="purple";
+        });
+    </script>
+
+</body>
+</html>
