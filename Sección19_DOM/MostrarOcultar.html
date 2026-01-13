@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="texto">Este es mi texto</p>
+    <button id="btn">Ver/Ocultar</button>
+
+    <script>
+        const texto=document.querySelector("#texto");
+        const boton=document.querySelector("#btn");
+
+        
+        boton.addEventListener("click",()=>{
+
+            if(texto.style.display==="none"){
+                texto.style.display="block";
+            }else{
+                texto.style.display="none";
+            }   
+        });
+    </script>
+    
+</body>
+</html>
