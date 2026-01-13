@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img id="foto" src="img/Gatitos.png" alt="Gatos" style="height: 200px; width: 300px; margin-bottom: 10px; ">
+    <br>
+    <button id="gatos">Gatos</button>
+    <button id="perros">Perros</button>
+
+    <script>
+        const imagen=document.querySelector("#foto");
+        const botonGatos=document.querySelector("#gatos");
+        const botonPerros=document.querySelector("#perros");
+
+        botonPerros.addEventListener("click",() =>{
+            imagen.src="img/Perritos.png";
+            imagen.style.border = "5px solid brown";
+        });
+
+        botonGatos.addEventListener("click",() =>{
+            imagen.src="img/Gatitos.png";
+            imagen.style.border = "5px solid orange"
+        });
+
+    </script>
+
+</body>
+</html>

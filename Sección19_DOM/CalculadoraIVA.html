@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Calculadora de IVA</h1>
+
+    <label>Precio Base:</label>
+    <input id="precio" type="number">
+    <button id="btn">Calcular</button>
+
+    <h2 id="resultado"></h2>
+
+    <script>
+
+        const precio=document.querySelector("#precio");
+        const boton=document.querySelector("#btn");
+        const total=document.querySelector("#resultado");
+
+        boton.addEventListener("click", () =>{
+            const precioBase=Number(precio.value);
+            const precioTotal=precioBase*1.21;
+            total.textContent="El precio con IVA es: " + precioTotal.toFixed(2);
+            total.style.color = "green";
+
+
+        });
+
+    </script>
+    
+</body>
+</html>

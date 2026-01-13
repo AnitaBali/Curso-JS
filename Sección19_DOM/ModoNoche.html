@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="titulo"> Modo Día </h1>
+    <img id="img-modo" src="img/sol.png" alt="Sol" style="width: 400px; height: 400px;">
+    <br>
+
+    <button id="btn-modo">Cambiar Ambiente</button>
+    
+    <script>
+
+        const texto=document.querySelector("#titulo");
+        const cuerpo=document.querySelector("body");
+        const imagen=document.querySelector("#img-modo");
+        const boton=document.querySelector("#btn-modo");
+
+        boton.addEventListener("click", ()=>{
+
+            if(cuerpo.style.backgroundColor==="black"){
+                cuerpo.style.backgroundColor="white";
+                texto.style.color="black";
+                texto.textContent="Modo Día";
+                imagen.src="img/sol.png";
+            }else{
+                cuerpo.style.backgroundColor="black";
+                texto.style.color="white";
+                texto.textContent="Modo Noche";
+                imagen.src="img/luna.png";
+
+            }
+        });
+
+
+
+    </script>
+</body>
+</html>
