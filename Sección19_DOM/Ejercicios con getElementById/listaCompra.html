@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label>Producto: </label>
+    <input id="producto" type="text">
+    <button id="btn-add">Añadir</button>
+    <ul id="mi-lista"></ul>
+
+    <script>
+        const producto=document.getElementById("producto");
+        const boton=document.getElementById("btn-add");
+        const lista=document.getElementById("mi-lista");
+
+        boton.addEventListener("click",()=>{
+            // 1. Fabricamos la pieza (li) y la guardamos en una variable
+            const nuevoItem=document.createElement("li");
+
+            // 2. La "pintamos" (le ponemos el texto que escribió el usuario)
+            nuevoItem.textContent=producto.value;
+
+            // 3. La ponemos en su sitio (dentro de la lista ul)
+            lista.appendChild(nuevoItem);
+
+            // Opcional: Limpiamos el input para escribir el siguiente producto
+            producto.value = "";
+
+        })
+    </script>
+
+</body>
+</html>

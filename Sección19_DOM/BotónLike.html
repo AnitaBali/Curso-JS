@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btn-like">0 Likes</button>
+
+    <script>
+        const boton=document.querySelector("#btn-like");
+        let contador=0;
+
+        boton.addEventListener("click",()=>{
+            contador++;
+            boton.textContent="Likes: " +contador;
+            boton.style.color="blue";
+            boton.style.fontSize="25px";
+        })
+
+    </script>
+
+</body>
+</html>

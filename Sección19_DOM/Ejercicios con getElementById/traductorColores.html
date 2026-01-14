@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label>Red,Blue or Green</label>
+    <input type="text" id="color-texto">
+    <button id="btn-color">Poner Color</button>
+
+    <div id="cuadro" style="width: 200px; height: 200px; border: 2px solid black; margin-top: 10px; display: flex; align-items: center; justify-content: center; text-align: center; "></div>
+
+    <script>
+        const color=document.getElementById("color-texto");
+        const boton=document.getElementById("btn-color");
+        const cuadro=document.getElementById("cuadro");
+
+        boton.addEventListener("click",()=>{
+            
+            if(color.value==="red"){
+                cuadro.style.backgroundColor="red";
+            }else if(color.value==="blue"){
+                cuadro.style.backgroundColor="blue";
+            }else if(color.value==="green"){
+                cuadro.style.backgroundColor="green";
+            }else{
+                cuadro.style.backgroundColor="black";
+                cuadro.textContent="No has elegido un color apto."
+                cuadro.style.color="white";
+            }
+        });
+    </script>
+
+</body>
+</html>

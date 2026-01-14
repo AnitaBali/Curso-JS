@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label>Escribe tu texto:</label>
+    <input id="usuario" type="text">
+    <button id="btn-contar">Contar</button>
+    <p id="resultado-longitud"> </p>
+
+    <script>
+        const usuarioEscrito=document.getElementById("usuario");
+        const boton=document.getElementById("btn-contar");
+        const mostrar=document.getElementById("resultado-longitud");
+
+        boton.addEventListener("click",()=>{
+            const totalCaracteres=usuarioEscrito.value.length;
+            mostrar.textContent="Has escrito: " + totalCaracteres + " letras";
+
+        });
+
+    </script>
+
+
+</body>
+</html>

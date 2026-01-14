@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="parrafo-simple">Mi parráfo de prueba</p>
+    <button id="btn-estilo">Actualizar</button>
+
+    <script>
+        const contenidoParrafo=document.getElementById("parrafo-simple");
+        const boton=document.getElementById("btn-estilo");
+
+        boton.addEventListener("click",()=> {
+            contenidoParrafo.style.backgroundColor="purple";
+            contenidoParrafo.style.color="white";
+            contenidoParrafo.style.borderRadius="20px";
+        })
+    </script>
+
+
+</body>
+</html>

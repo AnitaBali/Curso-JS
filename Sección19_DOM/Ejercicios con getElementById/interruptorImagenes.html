@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img id="bombilla" style="width: 200px; height: 200px; border-bottom: 2px;" src="/Sección19_DOM/img/apagada.png" alt="bombilla-apagada">
+    <br>
+    <button id="btn-switch">Encender</button>
+
+    <script>
+
+        const bombilla=document.getElementById("bombilla");
+        const boton=document.getElementById("btn-switch");
+
+        boton.addEventListener("click",()=>{
+
+            if(boton.textContent==="Encender"){
+                boton.textContent="Apagar";
+                bombilla.src="/Sección19_DOM/img/encendida.png";
+            }else{
+                boton.textContent="Encender";
+                bombilla.src="/Sección19_DOM/img/apagada.png";
+            }
+
+        })
+
+    </script>
+
+
+    
+</body>
+</html>
