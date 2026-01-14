@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="alerta" style="width: 200px; height: 200px; border: 2px solid black; background-color: rgb(197, 157, 236); display: flex; justify-content: center; align-items: center;"></div>
+    <button id="btn" style="margin-top: 2px;">Clic</button>
+
+    <script>
+        const alerta=document.getElementById("alerta");
+        const boton=document.getElementById("btn");
+
+        boton.addEventListener("click",()=>{
+            alerta.innerHTML="<div>¡CUIDADO! Algo ha salido mal</div>"
+            alerta.style.color="white";
+            alerta.style.background="red";
+            alerta.style.padding="10px";
+        })
+
+    </script>
+</body>
+</html>

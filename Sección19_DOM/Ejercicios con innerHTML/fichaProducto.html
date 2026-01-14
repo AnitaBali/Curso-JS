@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="caja" style="margin: 5px;padding: 5px;width: 200px; height: 200px; border: 2px solid black; background-color: rgb(209, 103, 128); display: flex; justify-content: center; align-items: center;flex-direction: column;"></div>
+    <button id="btn">Click</button>
+
+    <script>
+        const caja=document.getElementById("caja");
+        const boton=document.getElementById("btn");
+
+        boton.addEventListener("click",()=>{
+            caja.innerHTML=`
+            <h3>Zapatillas Pro</h3>
+            <p>Precio: 59.99€</p>
+            <button style='background: pink;'>Comprar</button>`;
+        })
+        
+    </script>
+    
+</body>
+</html>
