@@ -1,0 +1,9 @@
+.email{
+    color: rgb(74, 77, 230);
+}
+
+.error{
+    border: 2px solid red;
+    background-color: #fee; /* Un rojo muy clarito de fondo */
+    outline: none; /* Quitamos el borde azul por defecto de los navegadores */
+}

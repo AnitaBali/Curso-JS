@@ -1,0 +1,67 @@
+📘 ¿Qué es .classList.add()?
+Es un método de JavaScript que nos permite inyectar una o varias clases de CSS 
+a un elemento del HTML de forma dinámica.
+
+Imagina que las etiquetas HTML son personas. El HTML dice quiénes son, 
+y el CSS es su "armario" lleno de ropa (clases). .classList.add() es 
+la acción de ponerles una prenda específica mientras la página ya está funcionando.
+
+1. ¿Cómo se usa? (Sintaxis)
+
+elemento.classList.add("nombre-de-la-clase");
+Importante: Aquí NO se pone el punto (.) de la clase, solo el nombre. 
+El punto es solo para los selectores de CSS.
+
+2. ¿Cuándo se usa?
+Se utiliza cuando quieres que un elemento cambie su apariencia o comportamiento 
+debido a una acción del usuario o un evento del sistema.
+
+-----> Al hacer clic: Para resaltar un botón.
+-----> Al pasar el ratón: Para mostrar un menú oculto.
+-----> Al recibir un error: Para poner un borde rojo a un input si el usuario escribió algo mal.
+-----> Al cargar la página: Para activar animaciones de entrada.
+
+3. Usos más comunes en el mundo real
+---> Validación de formularios: 
+     Si el usuario olvida su email, haces input.classList.add("error").
+
+---> Menús desplegables: 
+     Cuando pulsas el icono de "hamburguesa", haces menu.classList.add("open").
+
+---> Tarjetas activas: 
+     En una lista de productos, cuando seleccionas uno, le añades la clase selected 
+     para que tenga un borde dorado.
+
+---> Estados de carga: Cuando pulsas "Enviar", añades la clase loading al botón 
+     para que aparezca un circulito girando.
+
+4. ¿Por qué es tan importante en el DOM?
+Esta es la clave de todo. Hay dos formas de cambiar el diseño con JS, 
+y .classList es la ganadora por goleada:
+
+    - Forma mala (Inline styles): elemento.style.backgroundColor = "red".
+      Problema: Mezclas el diseño con la lógica. Si luego quieres cambiar el color 
+    a azul, tienes que buscar en el código JS y cambiarlo. Es un caos en proyectos grandes.
+
+    - Forma buena (Clases): elemento.classList.add("error").
+      Ventaja: Separación de responsabilidades. JavaScript solo dice "ahora este elemento es un error", 
+      pero el cómo se ve ese error (color, borde, sombra) se decide en el archivo CSS. 
+      Si mañana decides que el error sea naranja, solo tocas el CSS.
+
+5. Características técnicas que debes saber
+   - Es inteligente: Si intentas añadir una clase que el elemento ya tiene, 
+     JavaScript lo ignora automáticamente. No la duplica.
+
+   - Múltiples clases: Puedes añadir varias a la vez separadas por comas: 
+     elemento.classList.add("clase1", "clase2", "clase3").
+
+   - No borra lo anterior: A diferencia de elemento.className = "nueva", .classList.add() 
+     mantiene las clases que el elemento ya tenía y solo añade la nueva.
+
+
+💡 Ejemplo rápido de lógica:
+CSS: Creas una clase .resaltado { background: yellow; transform: scale(1.1); }.
+
+JS: Cuando el usuario pasa el ratón por una noticia, ejecutas .classList.add("resaltado").
+
+Resultado: La noticia se ilumina y crece un poco sin que JS tenga que saber nada de píxeles o colores.

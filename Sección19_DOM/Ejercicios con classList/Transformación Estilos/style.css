@@ -1,0 +1,20 @@
+/* Estilo por defecto */
+.caja-base {
+    width: 300px;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    background-color: #eee;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    transition: 0.5s; /* Para que el cambio de color sea suave */
+}
+
+/* Esta clase SOLO se activará desde JavaScript */
+.exito {
+    background-color: #2ecc71; /* Verde esmeralda */
+    color: white;
+    border-color: #27ae60;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
