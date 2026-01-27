@@ -62,3 +62,40 @@ let evaluarNota=nota=>{
 
 console.log(evaluarNota(3));
 console.log(evaluarNota(7));
+
+/*
+📌 La Regla de Oro
+Usa siempre const para declarar tus funciones.
+
+¿Por qué? Porque una función es una lógica que defines para que haga algo. 
+No quieres que, por error, más adelante en tu código, esa función sea sobrescrita 
+por un número o un texto.
+
+1. ¿Cuándo usar const? (El 99% de las veces)
+Se usa para declarar la función porque su "identidad" no va a cambiar. 
+Quieres que boton.addEventListener siempre ejecute esa función específica y no otra cosa.
+
+// ✅ CORRECTO: La función saludar siempre será esta lógica
+const saludar = () => {
+    console.log("Hola");
+};
+
+2. ¿Cuándo usar let? (Casi nunca para funciones)
+Solo usarías let si tienes planeado cambiar la función completa por otra función 
+distinta más adelante. Es un caso muy raro y suele considerarse una mala práctica p
+orque hace el código difícil de seguir.
+
+// ⚠️ RARO: Cambiar la lógica sobre la marcha
+let miFuncion = () => console.log("Lógica A");
+
+if (algoPasa) {
+    miFuncion = () => console.log("Lógica B"); // Reasignación
+}
+
+Variables de datos: * Usa let si el valor va a cambiar (un contador, un acumulador).
+
+Usa const si el valor es fijo (un ID, un nombre, una configuración).
+
+Funciones (Arrow o normales): * Usa siempre const. Da seguridad a tu código y evita errores accidentales.
+
+*/

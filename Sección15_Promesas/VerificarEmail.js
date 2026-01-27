@@ -12,6 +12,6 @@ const verificarEmail = email => {
     });
 };
 
-verificarEmail("admn@gmail.com")
+verificarEmail("admin@gmail.com")
     .then(mensaje => console.log(mensaje))
     .catch(error => console.log(error))
